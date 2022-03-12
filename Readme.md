@@ -1,7 +1,6 @@
 # Fullstack Project
 
-This is a test project built with Next.js to test off the capabilities of Next.js with both
-frontend and backend in mind.
+This is a test project built with Next.js to test off the capabilities of Next.js with both frontend and backend in mind.
 
 ## Initializing the project
 

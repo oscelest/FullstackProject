@@ -1,6 +1,5 @@
 import Component from "./Component";
 import Style from "./Header.module.scss";
-import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {withTranslation, WithTranslation} from "next-i18next";
 
 class Header extends Component<HeaderProps, State> {

@@ -1,7 +1,7 @@
 import Component from "./Component";
 import Style from "./Content.module.scss";
 
- class Content extends Component<ContentProps, State> {
+class Content extends Component<ContentProps, State> {
 
   public render() {
     return (

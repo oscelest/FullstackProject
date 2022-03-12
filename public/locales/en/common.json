@@ -1,5 +1,5 @@
 {
-  "Header_Title": "This is the header",
-  "Footer_Title": "This is the footer",
+  "Header_Title":      "This is the header",
+  "Footer_Title":      "This is the footer",
   "IndexPage_Content": "Hello World"
 }
