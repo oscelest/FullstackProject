@@ -13,6 +13,29 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
     font-size:  16px;
+    font-family: OpenSans;
   }
 
 }
+
+@mixin OpenSans($url, $weight, $style) {
+  @font-face {
+    font-family: OpenSans;
+    font-weight: $weight;
+    font-style:  $style;
+    src:         url("/fonts/OpenSans-" + $url + ".ttf");
+  }
+}
+
+@include OpenSans("Light", 300, normal);
+@include OpenSans("LightItalic", 300, italic);
+@include OpenSans("Regular", 400, normal);
+@include OpenSans("Italic", 400, italic);
+@include OpenSans("Medium", 500, normal);
+@include OpenSans("MediumItalic", 500, italic);
+@include OpenSans("SemiBold", 600, normal);
+@include OpenSans("SemiBoldItalic", 600, italic);
+@include OpenSans("Bold", 700, normal);
+@include OpenSans("BoldItalid", 700, italic);
+@include OpenSans("ExtraBold", 800, normal);
+@include OpenSans("ExtraBoldItalic", 800, italic);
