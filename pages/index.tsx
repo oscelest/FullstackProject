@@ -3,6 +3,7 @@ import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import {withTranslation, WithTranslation} from "next-i18next";
 import Component from "../components/application/Component";
 import {NextPageContext} from "next";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export async function getServerSideProps(context: NextPageContext) {
   return {props: await serverSideTranslations(context.locale ?? context.defaultLocale ?? "en", ["common"])};
