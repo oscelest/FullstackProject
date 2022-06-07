@@ -6,9 +6,7 @@ class Footer extends Component<FooterProps, State> {
 
   public render() {
     return (
-      <div className={Style.Component}>
-        {this.props.t("Footer_Title")}
-      </div>
+        <div></div>
     );
   }
 }

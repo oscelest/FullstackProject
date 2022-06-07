@@ -6,6 +6,7 @@ import Content from "../components/application/Content";
 import Footer from "../components/application/Footer";
 import "../public/style.scss";
 import {appWithTranslation} from "next-i18next";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Application extends App {
 

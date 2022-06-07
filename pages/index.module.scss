@@ -1,0 +1,10 @@
+@use '../public/globalVariables.scss' as global;
+
+.title {
+    border-bottom: 1px solid global.$primary;
+    width: 25rem;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+// cast a shadow on the button

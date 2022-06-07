@@ -1,3 +1,5 @@
+@import './globalVariables.scss';
+
 html {
   display:   flex;
   flex:      1 1 auto;
@@ -11,14 +13,17 @@ html {
     margin:      0;
     padding:     0;
     overflow-x:  hidden;
-    overflow-y:  scroll;
+    overflow-y:  auto;
     font-size:   16px;
     font-family: OpenSans;
+    #__next{
+      display: flex;  
+      flex: 1 1 auto;
+      flex-flow: column;
+    }
   }
 
-}
-
-@mixin OpenSans($url, $weight, $style) {
+}@mixin OpenSans($url, $weight, $style) {
   @font-face {
     font-family: OpenSans;
     font-weight: $weight;
