@@ -1,0 +1,76 @@
+@import '../../public/globalVariables.scss';
+
+$burgerMenuWidth: 20px;
+$burgerMenuLineHeight: 1px;
+$burgerMenuLineDistance: 4px;
+
+
+@media (max-width: $breakpoint-md) {
+  .navigation{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.17s;
+  }
+
+  input:checked ~ .navigation{
+    max-height: 100%;
+  }
+  $angle: 45deg;
+  .burgerMenu{
+    &::before, &:after{
+      transition: 0.3s;
+    }
+  }
+  input:checked ~ * .burgerMenu{
+    visibility: hidden;
+    &::before, &::after{
+      visibility: visible;
+    }
+    &::before{
+      transform: rotate($angle) translate($burgerMenuLineHeight/2);
+    }
+    &::after{
+      transform: rotate(-$angle);
+    }
+  }
+}
+
+.menuLink {
+  color: var(--bs-gray-dark);
+  background-color: var(--bs-white);
+  text-decoration: none; 
+
+  &:hover{
+    color: var(--bs-gray-600);
+    border: 1px solid var(--bs-gray-600);
+    border-radius: 1em;
+  }
+}
+
+.burgerMenu{
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: $burgerMenuLineHeight;
+  width: $burgerMenuWidth;
+  background-color: black;
+  
+  &::before,
+  &::after {
+    content: ' ';
+    display: block;
+    height: $burgerMenuLineHeight;
+    width: $burgerMenuWidth;
+    background-color: black;
+  }
+
+  &::before {
+    transform: translateY(-$burgerMenuLineDistance - $burgerMenuLineHeight);
+  }
+  
+  &::after {
+    transform: translateY($burgerMenuLineDistance);
+  }
+}
+
+
