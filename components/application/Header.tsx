@@ -5,7 +5,26 @@ const templateIds =  {
   burgerButton: 'burgerButton'
 };
 
-export default class Header extends Component {
+export default class Header<IHeaderProp> extends Component {
+  constructor(props: IHeaderProp) {
+    super(props);
+    this.state = {
+      menuItems: [
+        {
+          titel: "Home",
+          url: "/",
+        },
+        {
+          titel: "About",
+          url: "/about",
+        },
+        {
+          titel: "Contact",
+          url: "/contact",
+        }
+      ]
+    };
+  }
   public render() {
     return (
       <header className={`${style.header} d-md-flex mt-2`}>
@@ -27,24 +46,15 @@ export default class Header extends Component {
     );
   }
   state : {menuItems: IMenuItem[]} = {
-    menuItems: [
-      {
-        titel: "Home",
-        url: "/",
-      },
-      {
-        titel: "About",
-        url: "/about",
-      },
-      {
-        titel: "Contact",
-        url: "/contact",
-      }
-    ]
+    menuItems: []
   }
 }
 
-export interface IMenuItem{
+interface IMenuItem{
   titel: string;
   url: string;
+}
+
+export interface IHeaderProp{
+
 }
