@@ -6,7 +6,7 @@ import {NextPageContext} from "next";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export async function getServerSideProps(context: NextPageContext) {
-  return {props: await serverSideTranslations(context.locale ?? context.defaultLocale ?? "en", ["n"])};
+  return {props: await serverSideTranslations(context.locale ?? context.defaultLocale ?? "en", ["common"])};
 }
 
 class IndexPage extends Component<IndexPageProps,IndexState> {

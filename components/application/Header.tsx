@@ -3,7 +3,7 @@ import style from "./Header.module.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const templateIds =  {
-  burgerFlipper: 'burgerFlipper'
+  burgerFlipper: 'burgerButton'
 };
 
 export default class Header extends Component {
@@ -45,21 +45,7 @@ export default class Header extends Component {
   }
 }
 
-
 export interface IMenuItem{
   titel: string;
   url: string;
-}
-
-// Check if it's friday the 13th
-const isFriday13th = (date: Date) => {
-  const day = date.getDay();
-  const day13th = new Date(date.getFullYear(), date.getMonth(), 13);
-
-  return day === day13th.getDay();
-}
-
-
-interface IVideoFile {
-
 }
