@@ -1,6 +1,5 @@
 import Component from "./Component";
 import style from "./Header.module.scss";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const templateIds =  {
   burgerButton: 'burgerButton'
