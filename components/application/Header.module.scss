@@ -4,7 +4,6 @@ $burgerMenuWidth: 20px;
 $burgerMenuLineHeight: 1px;
 $burgerMenuLineDistance: 4px;
 
-$burgerButton: "burgerButton";
 
 @media (max-width: $breakpoint-md) {
   .navigation{
@@ -13,7 +12,7 @@ $burgerButton: "burgerButton";
     transition: 0.17s;
   }
 
-  #burgerButton:checked ~ .navigation{
+  input:checked ~ .navigation{
     max-height: 100%;
   }
   $angle: 45deg;
@@ -22,7 +21,7 @@ $burgerButton: "burgerButton";
       transition: 0.3s;
     }
   }
-  #burgerButton:checked ~ * .burgerMenu{
+  input:checked ~ * .burgerMenu{
     visibility: hidden;
     &::before, &::after{
       visibility: visible;

@@ -3,15 +3,15 @@ import style from "./Header.module.scss";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const templateIds =  {
-  burgerFlipper: 'burgerButton'
+  burgerButton: 'burgerButton'
 };
 
 export default class Header extends Component {
   public render() {
     return (
       <header className={`${style.header} d-md-flex mt-2`}>
-        <input type="checkbox" id={`${templateIds.burgerFlipper}`} className={`d-none`}></input>
-        <label className={`d-flex align-items-center justify-content-center my-3 ms-md-3`} htmlFor={templateIds.burgerFlipper}>
+        <input type="checkbox" id={`${templateIds.burgerButton}`} className={`d-none`}></input>
+        <label className={`d-flex align-items-center justify-content-center my-3 ms-md-3`} htmlFor={templateIds.burgerButton}>
           <h1 className="m-0 text-align-center">Website name</h1>
           <div className={`${style.burgerMenu} d-md-none ms-3`}></div>
         </label>
